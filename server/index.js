@@ -10,13 +10,7 @@ const path = require('path');
 const port = process.env.PORT || 5000;
 
 
-app.use(cors(
-    {
-        origin: ["https://talky-chats-app.vercel.app/"],
-        methods: ["POST","GET"],
-        credentials: true
-    }    
-));
+app.use(cors());
 app.use(express.json());
 
 
@@ -57,7 +51,8 @@ const server = app.listen(port, () =>{
 
 const io = socket(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: ["https://talky-chats-app.vercel.app/"],
+        methods: ["POST","GET"],
       credentials: true,
     },
   });
