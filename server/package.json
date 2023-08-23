@@ -7,8 +7,8 @@
   
    
      "start":  "nodemon index.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+     
+    "test": "react-scripts test"
     
      
   },
